@@ -21,6 +21,7 @@ To solve this question, I used data for animal videos from last year. The data i
 **Step 1: Identify cats/dogs owners**
 
 After cleaning the data without comments. I screened and labeled cat/dog owners based on their comments.  To ensure label accuracy, the typical keywords I used are strong indications of owner such as “my dog” and “my cat”. So the assumption here was that those labelings are ‘accurate’. By doing this, around 1% users are directly labeled as pet owners. 
+
 The model used to find other owners is skip-gram model implemented by the Word2Vec module in the Pyspark. It translated the words in comments into a representative vector by ‘looking’ at the whole corpus. Then the numerical vector was fitted and transformed by classification models for prediction.
 
 The original dataset was split by in a way to ensure both training and test datasets had a reasonable ratio of  1 and 0 to avoid data skewness.
