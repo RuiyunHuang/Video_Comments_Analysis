@@ -1,4 +1,6 @@
-**Case:**
+**Case:** 
+
+---
 
 We are a social media company providing advertisement services on our video website. Recently, we received a contract from a pet food company that wants to put an advertisement about their new product and increase its selling profit across the country. 
  
@@ -14,6 +16,8 @@ To solve this question, I used data for animal videos from last year. The data i
 
 **Steps:**
 
+---
+
 Step 1: Identify cats/dogs owners
 
 After cleaning the data without comments. I screened and labeled cat/dog owners based on their comments.  To ensure label accuracy, the typical keywords I used are strong indications of owner such as “my dog” and “my cat”. So the assumption here was that those labelings are ‘accurate’. By doing this, around 1% users are directly labeled as pet owners. 
@@ -25,6 +29,10 @@ Step 2: Build classifiers for the cat/dog owners and measure the performance of 
 
 Here, logistic regression, random forest and gradient boosted tree models were used and compared. Cross-validation was used to tuning hyperparameter for each model. The threshold was set as 0.5. Then best model was chosen by comparing their performance on the test data. Random forest was chosen due to high AOC 
 
+
+![figures](https://github.com/RuiyunHuang/Video_Comments_Analysis/blob/master/figures/evaluation.png)
+
+
 Step 3: Apply the classifiers to all the users then estimate the fraction of all users who are cat/dog owners.
 
 By applying the best model to all the users, I found around 21.7 % of users (0.5 million) are pet owners. If 10% of those users buy their product (40 dollars per month), it is a market around 2 million per month.  This also means around 1 in 5 people who watch animal videos are dog/cat owners. So there is a bigger potential market by considering older data.
@@ -32,4 +40,6 @@ By applying the best model to all the users, I found around 21.7 % of users (0.5
 Step 4: Find creators with the highest statistically significant percentages of the audience who are cat/dog owners.
 
 Good channels for this advertisement are listed. 0.05 was used as a statistically significant threshold.
+
+![figures](https://github.com/RuiyunHuang/Video_Comments_Analysis/blob/master/figures/creators.png)
  
