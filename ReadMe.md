@@ -38,6 +38,8 @@ Here, logistic regression, random forest and gradient boosted tree models were u
 
 By applying the best model to all the users, I found around 21.7 % of users (0.5 million) are pet owners. If 10% of those users buy their product (40 dollars per month), it is a market around 2 million per month.  This also means around 1 in 5 people who watch animal videos are dog/cat owners. So there is a bigger potential market by considering older data.
 
+![figures](https://github.com/RuiyunHuang/Video_Comments_Analysis/blob/master/figures/users.png)
+
 **Step 4: Find creators with the highest statistically significant percentages of the audience who are cat/dog owners.**
 
 Good channels for this advertisement are listed. 0.05 was used as a statistically significant threshold.
